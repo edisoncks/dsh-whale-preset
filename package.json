@@ -1,6 +1,6 @@
 {
   "name": "dsh-whale-preset",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Whale-chan and 鲸鱼娘 agent presets for DeepSeek Harness: the shipped ptc preset with tool-web disabled, one preset per reply language.",
   "license": "MIT",
   "author": "Edison Chong",

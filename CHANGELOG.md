@@ -4,6 +4,16 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.2] - 2026-10-26
+
+### Changed
+
+- Move the persona identity sentence — the one that declares the agent and its
+  reply language — from the top of `prefix` to directly beneath the persona
+  marker tokens, in both presets. The token block now opens the prompt as a load
+  directive, and the sentence shares a paragraph with the invariant rule it
+  belongs to. Text, token count, and section order are unchanged.
+
 ## [1.0.1] - 2026-10-25
 
 ### Changed
