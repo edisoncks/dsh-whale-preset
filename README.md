@@ -37,7 +37,7 @@ untouched and the whale presets coexist with it.
 
 Otherwise both plugin lists are identical: persona, instructions, time context,
 bash/pwsh, filesystem, filesystem search, jobs, schedule, skills, goals, plan
-mode, compaction, subagents, ask-user, todo, presentation, and the disabled
+mode, compaction, subagents, ask-user, todo, the PTC executor, and the disabled
 workflow and plugin-manager rows. The lists are duplicated rather than shared,
 so update both when porting upstream changes.
 
@@ -52,7 +52,7 @@ profile does. The package is distributed from GitHub, not npm, so pin the tag
 you want:
 
 ```sh
-dsh plugin --profile web add github:edisoncks/dsh-whale-preset#v1.0.0
+dsh plugin --profile web add github:edisoncks/dsh-whale-preset#v1.1.0
 ```
 
 `pnpm` resolves the git tag into the profile's lockfile. To track the default
@@ -123,8 +123,11 @@ That is the supported path, and it keeps the diff here small.
   network: container, namespace, firewall, proxy. A YAML flag is not a
   security boundary, and pretending otherwise is how people get burned.
 - **Not a fork, and it does not track upstream.** The preset lists are a
-  snapshot of `ptc` as shipped in DSH 0.2.1-rc.3. When upstream changes, this
-  file does not change with it. After a DSH upgrade, diff:
+  snapshot of `ptc` as shipped in DSH 0.2.2-rc.1 — deliberately one release
+  behind the newest: the 0.2.2-rc.5-only `tool-office` row and the
+  `interrupt: false` config exist only from rc.5 onward, so they stay out
+  until the baseline moves. When upstream changes, this file does not
+  change with it. After a DSH upgrade, diff:
 
   ```sh
   diff <dsh-install>/node_modules/@deepseek-ai/dsh-web-app/presets/ptc.patch.yml cordis.patch.yml
